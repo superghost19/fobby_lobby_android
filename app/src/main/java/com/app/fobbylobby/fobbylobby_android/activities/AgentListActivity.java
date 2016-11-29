@@ -25,7 +25,7 @@ public class AgentListActivity extends AppCompatActivity {
     private ListView listView;
     private ListAdapter listAdapter;
 
-    private List<Agent> listItems = new ArrayList<>();
+    private ArrayList<Agent> listItems = new ArrayList<Agent>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,7 @@ public class AgentListActivity extends AppCompatActivity {
 
             case R.id.action_map_view:
                 Intent intent = new Intent(this, AgentMapsActivity.class);
+                intent.putParcelableArrayListExtra("EXTRA_AGENTS", listItems);
                 startActivity(intent);
                 break;
 

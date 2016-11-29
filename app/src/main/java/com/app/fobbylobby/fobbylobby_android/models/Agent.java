@@ -1,6 +1,9 @@
 package com.app.fobbylobby.fobbylobby_android.models;
 
-public class Agent {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Agent implements Parcelable {
     private int id;
     private String name;
     private String address;
@@ -19,6 +22,27 @@ public class Agent {
         this.longitute = longitude;
         this.rating = rating;
     }
+
+    protected Agent(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        address = in.readString();
+        rating = in.readInt();
+        latitute = in.readDouble();
+        longitute = in.readDouble();
+    }
+
+    public static final Creator<Agent> CREATOR = new Creator<Agent>() {
+        @Override
+        public Agent createFromParcel(Parcel in) {
+            return new Agent(in);
+        }
+
+        @Override
+        public Agent[] newArray(int size) {
+            return new Agent[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -78,5 +102,20 @@ public class Agent {
                 ", latitute=" + latitute +
                 ", longitute=" + longitute +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(name);
+        dest.writeString(address);
+        dest.writeInt(rating);
+        dest.writeDouble(latitute);
+        dest.writeDouble(longitute);
     }
 }

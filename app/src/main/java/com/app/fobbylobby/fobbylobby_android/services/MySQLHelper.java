@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.app.fobbylobby.fobbylobby_android.models.Agent;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -70,8 +71,8 @@ public class MySQLHelper extends SQLiteOpenHelper {
     }
 
     // Get All Books
-    public List<Agent> getAllAgents() {
-        List<Agent> agents = new LinkedList<>();
+    public ArrayList<Agent> getAllAgents() {
+        ArrayList<Agent> agents = new ArrayList<>();
         // 1. build the query
         String query = "SELECT * FROM " + TABLE_AGENTS;
         // 2. get reference to writable DB

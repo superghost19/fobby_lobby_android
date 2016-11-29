@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -104,7 +105,9 @@ public class AgentMapsActivity extends AppCompatActivity {
             mMap.addMarker(new MarkerOptions().position(new LatLng(agent.getLatitute(), agent.getLongitute())).title
                     (agent.getName()));
         }
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(11);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(40, 50)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(41.85, -87.635)));
+        mMap.animateCamera(zoom);
     }
 }

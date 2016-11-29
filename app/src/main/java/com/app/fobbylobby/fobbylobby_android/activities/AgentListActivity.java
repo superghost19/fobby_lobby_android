@@ -87,10 +87,19 @@ public class AgentListActivity extends AppCompatActivity {
         /** CRUD Operations **/
         // add Books
         if(db.getIds() == 0) {
-            db.addAgent(new Agent("Zhou Agent", "500 W China Plaza", 40.1, 50.2, 5));
-            db.addAgent(new Agent("Zhang Agent", "2000 N State St", 40.2, 50.3, 3));
-            db.addAgent(new Agent("Buy New Home Real Estate", "1234 W Madison St", 40.3, 50.4, 4));
-            db.addAgent(new Agent("EasySell Real Estate", "567 W Monroe", 40.4, 50.5, 2));
+            db.addAgent(new Agent("Centurion Realty & Estates", "2325 S Michigan Ave", 41.8571078, -87.6243462, 5));
+            db.addAgent(new Agent("CENTURY 32 S.G.R., Inc", "1823 S Michigan Ave", 41.8928646, -87.673763, 3));
+            db.addAgent(new Agent("Bricks Realty", "3107 S Morgan St", 41.8377042, -87.6531397, 4));
+            db.addAgent(new Agent("Dream Town Realty", "1950 N Sedgwick St", 41.9179905, -87.6390923, 2));
+            db.addAgent(new Agent("Baird & Warner Real Estate", "120 S La Salle St", 41.8804696, -87.6327948, 5));
+            db.addAgent(new Agent("Coldwell Banker Residential Brokerage", "1314 E 47th St", 41.8104711, -87.5942225,
+                    3));
+            db.addAgent(new Agent("Conlon: A Real Estate Company", "401 W Ontario St #400", 41.89287, -87.6387435,
+                    4));
+            db.addAgent(new Agent("Davis Russell REal Estate & Management, LLC", "3473 S king Drive #304", 41.8490542,
+                    -87.6392181, 2));
+            db.addAgent(new Agent("Ultimate Real Estate Group", "400 E 41st St", 41.8490116, -87.6392182, 5));
+            db.addAgent(new Agent("CONLON/Christie's International Real Estate", "401 W Ontario St", 41.8489691, -87.6392184, 3));
         }
         // get all books
 //        List<Agent> list = db.getAllAgents();

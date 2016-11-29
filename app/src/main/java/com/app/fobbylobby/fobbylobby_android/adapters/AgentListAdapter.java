@@ -37,7 +37,6 @@ public class AgentListAdapter extends ArrayAdapter {
 
         Agent currentAgent = agentList.get(position);
         ListAgentName.setText(currentAgent.getName());
-        listViewItemId.setText(Integer.toString(currentAgent.getId()));
         listAgentAddress.setText(currentAgent.getAddress());
         listAgentRating.setRating((float) currentAgent.getRating());
 

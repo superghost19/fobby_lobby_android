@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MySQLHelper extends SQLiteOpenHelper {
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
     // Database Name
     private static final String DATABASE_NAME = "AgentDB";
     // Books table name

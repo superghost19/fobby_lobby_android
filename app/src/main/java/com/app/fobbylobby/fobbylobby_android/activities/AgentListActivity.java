@@ -87,7 +87,7 @@ public class AgentListActivity extends AppCompatActivity {
         // add Books
         if(db.getIds() == 0) {
             db.addAgent(new Agent("Centurion Realty & Estates", "2325 S Michigan Ave", 41.8571078, -87.6243462, 5));
-            db.addAgent(new Agent("CENTURY 32 S.G.R., Inc", "1823 S Michigan Ave", 41.8928646, -87.673763, 3));
+            db.addAgent(new Agent("CENTURY 32 S.G.R., Inc", "1823 S Michigan Ave", 41.8571698, -87.6236542, 3));
             db.addAgent(new Agent("Bricks Realty", "3107 S Morgan St", 41.8377042, -87.6531397, 4));
             db.addAgent(new Agent("Dream Town Realty", "1950 N Sedgwick St", 41.9179905, -87.6390923, 2));
             db.addAgent(new Agent("Baird & Warner Real Estate", "120 S La Salle St", 41.8804696, -87.6327948, 5));

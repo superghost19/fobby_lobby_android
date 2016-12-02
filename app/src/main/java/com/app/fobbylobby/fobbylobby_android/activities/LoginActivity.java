@@ -1,9 +1,5 @@
 package com.app.fobbylobby.fobbylobby_android.activities;
 
-/**
- * Created by liushuxiao on 11/29/16.
- */
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,26 +20,25 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText)findViewById(R.id.username);
-        password = (EditText)findViewById(R.id.password);
-        loginBtn = (Button)findViewById(R.id.loginButton);
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+        loginBtn = (Button) findViewById(R.id.loginButton);
+        loginBtn.setOnClickListener(new LoginButtonListener());
+    }
 
-
-    loginBtn.setOnClickListener(new View.OnClickListener(){
+    public class LoginButtonListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             String userName = username.getText().toString();
             String passWord = password.getText().toString();
-            if (userName.equals("abc") && passWord.equals("xyz")){
+            if (userName.equals("abc") && passWord.equals("xyz")) {
 
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
-            }else{
-                Toast toast = Toast.makeText(getApplicationContext(),"Invalid username or password",Toast.LENGTH_SHORT);
+            } else {
+                Toast toast = Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT);
                 toast.show();
-
             }
         }
-    });
     }
 }

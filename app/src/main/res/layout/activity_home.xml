@@ -20,12 +20,12 @@
                   android:gravity="center"
                   android:orientation="vertical">
 
-        <Button android:id="@+id/nearbyRealEstateAgentButton"
+        <Button android:id="@+id/nearby_real_estate_agent_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="25dp"
                 android:layout_margin="10dp"
-                android:background="@color/buttonBackground"
+                android:background="@color/button_background"
                 android:textColor="@color/text"
                 android:text="Real Estate"/>
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:padding="25dp"
                 android:layout_margin="10dp"
-                android:background="@color/buttonBackground"
+                android:background="@color/button_background"
                 android:textColor="@color/text"
                 android:text="Mortgage Agents"/>
 
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:padding="25dp"
                 android:layout_margin="10dp"
-                android:background="@color/buttonBackground"
+                android:background="@color/button_background"
                 android:textColor="@color/text"
                 android:text="Legal Service"/>
     </LinearLayout>

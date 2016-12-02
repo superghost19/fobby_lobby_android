@@ -18,7 +18,6 @@ import com.app.fobbylobby.fobbylobby_android.models.Agent;
 import com.app.fobbylobby.fobbylobby_android.services.MySQLHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AgentListActivity extends AppCompatActivity {
 
@@ -39,7 +38,7 @@ public class AgentListActivity extends AppCompatActivity {
     }
 
     private void bindViews() {
-        listView = (ListView) findViewById(R.id.bookList);
+        listView = (ListView) findViewById(R.id.book_list);
         listAdapter = new AgentListAdapter(AgentListActivity.this, listItems);
 
         listView.setAdapter(listAdapter);
@@ -101,13 +100,6 @@ public class AgentListActivity extends AppCompatActivity {
             db.addAgent(new Agent("Ultimate Real Estate Group", "400 E 41st St", 41.8490116, -87.6392182, 5));
             db.addAgent(new Agent("CONLON/Christie's International Real Estate", "401 W Ontario St", 41.8489691, -87.6392184, 3));
         }
-        // get all books
-//        List<Agent> list = db.getAllAgents();
-//        // update one book
-//        int j = db.updateBook(list.get(2), "Liu Agent", "501 W China Plaza", 50.6, 40.5, 5);
-//        // delete one book
-//        db.deleteAgent(list.get(0));
-        // get all books
         listItems = db.getAllAgents();
     }
 
@@ -115,10 +107,9 @@ public class AgentListActivity extends AppCompatActivity {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-//            String agentName = parent.getItemAtPosition(pos).toString();
-            String agentName = listItems.get(pos).getName();
+            Agent agentSelected = listItems.get(pos);
             Intent intent = new Intent(AgentListActivity.this, AgentDetailsActivity.class);
-            intent.putExtra("EXTRA_AGENT_NAME", agentName);
+            intent.putExtra("EXTRA_AGENT_SELECTED", agentSelected);
             startActivity(intent);
         }
     }

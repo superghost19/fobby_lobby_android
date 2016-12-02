@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        nearbyButton = (Button) findViewById(R.id.nearbyRealEstateAgentButton);
+        nearbyButton = (Button) findViewById(R.id.nearby_real_estate_agent_button);
         nearbyButton.setOnClickListener(new MyOnClickListener());
     }
 

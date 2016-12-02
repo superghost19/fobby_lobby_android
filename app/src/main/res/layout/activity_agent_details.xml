@@ -5,6 +5,26 @@
               android:layout_height="match_parent">
 
     <TextView android:id="@+id/agent_name"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content" />
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:id="@+id/agent_address"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+    <RatingBar android:id="@+id/agent_rating"
+               style="?android:attr/ratingBarStyleSmall"
+               android:stepSize="1"
+               android:numStars="5"
+               android:isIndicator="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:paddingBottom="10dp"/>
+
+    <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="MapAPIKey"
+            android:clickable="true" />
 </LinearLayout>

@@ -27,7 +27,7 @@
                 android:layout_margin="10dp"
                 android:background="@color/button_background"
                 android:textColor="@color/text"
-                android:text="Real Estate"/>
+                android:text="@string/real_estate"/>
 
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                 android:layout_margin="10dp"
                 android:background="@color/button_background"
                 android:textColor="@color/text"
-                android:text="Mortgage Agents"/>
+                android:text="@string/mortgage_agents"/>
 
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,6 +43,6 @@
                 android:layout_margin="10dp"
                 android:background="@color/button_background"
                 android:textColor="@color/text"
-                android:text="Legal Service"/>
+                android:text="@string/legal_service"/>
     </LinearLayout>
 </RelativeLayout>

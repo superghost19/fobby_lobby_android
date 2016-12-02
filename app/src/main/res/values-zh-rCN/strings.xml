@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fobby Lobby</string>
+    <string name="title_activity_agent_maps">地图</string>
+    <string name="mortgage_agents">贷款业务</string>
+    <string name="real_estate">房地产业务</string>
+    <string name="legal_service">法律业务</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+</resources>
